@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Home Page</title>
+    {% endif %}
+
+    <!-- Bootstrap -->
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="all">
+      .text_center {
+		  text-align: center;
+	  }
+      
+      #header {
+        height: auto;
+        background-color: #5B5B5B;
+        padding-bottom: 50px;
+      }
+      
+      #big_title {
+          margin-top: 200px;
+      }
+      
+      #login_form {
+		  margin-top: 80px;
+	  }
+      
+      input {
+        background: none;
+        border-style:none;
+        border-bottom-style:solid;
+        border-bottom-width:thin;
+        border-bottom-color:white;
+      }
+      
+      input:focus {
+        outline: none;
+      }
+      
+      #error_msg {
+          margin-top: 20px;
+          height: 30px;
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="header" class="container-fluid">
+      <div id="big_title" class="row text_center">
+        <div class="col-sm-12">
+            <h1>Hello, {{user.nickname}}</h1>     
+        </div>  
+      </div>
+      <div id="small_title" class="row text_center">
+        <div class="col-sm-12">
+          <h3>zhe di que shi yi ge niu bi de ce shi guan li xi tong</h3>
+        </div>
+      </div>
+      <div id="login_form" class="text_center">
+        <form action="/" method="POST">
+          <div id="input_fields" class="row">
+            <div class="col-sm-3 col-sm-offset-3">
+              <input type="text" placeholder="username">
+            </div>
+            <div class="col-sm-3">
+              <input type="text" placeholder="password">
+            </div>
+            <div id="error_msg" class="col-sm-12">
+              <p>Error message</p>
+            </div>
+          </div>
+          <div id="login_btn" class="row">
+            <div class="col-sm-12">
+              <input type="submit">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="sign_up" class="row text_center">
+        <div class="col-sm-12">
+          <a href="/">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    </script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+  </body>
+</html>
